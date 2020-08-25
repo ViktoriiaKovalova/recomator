@@ -235,6 +235,8 @@ func ListAllProjectsRecommendations(service GoogleService, numConcurrentCalls in
 	if err != nil {
 		return nil, err
 	}
+	
+	log.Println(projects)
 
 	task.SetNumberOfSubtasks(2) // 2 subtasks are calls to ListRequirements and listRecommendationsIfRequirementsCompleted
 
@@ -242,6 +244,8 @@ func ListAllProjectsRecommendations(service GoogleService, numConcurrentCalls in
 	if err != nil {
 		return nil, err
 	}
+	
+	log.Println(projectsRequirements)
 
 	task.IncrementDone()
 
