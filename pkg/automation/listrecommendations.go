@@ -18,6 +18,7 @@ package automation
 
 import (
 	"fmt"
+	"log"
 
 	"google.golang.org/api/compute/v1"
 	"google.golang.org/api/recommender/v1"
