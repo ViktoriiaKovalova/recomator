@@ -214,9 +214,9 @@ func listRecommendationsIfRequirementsCompleted(service GoogleService, projectsR
 			if err != nil {
 				return nil, err
 			}
-			listResult.recommendations = append(listResult.Recommendations, newRecs...)
+			listResult.Recommendations = append(listResult.Recommendations, newRecs...)
 		} else {
-			listResult.failedProjects = append(listResult.FailedProjects, projectRequirements)
+			listResult.FailedProjects = append(listResult.FailedProjects, projectRequirements)
 		}
 
 		task.IncrementDone()
